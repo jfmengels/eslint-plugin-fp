@@ -1,0 +1,46 @@
+{
+  "name": "eslint-plugin-fp",
+  "version": "0.0.0",
+  "description": "ESLint rules for functional programming",
+  "license": "MIT",
+  "repository": "jfmengels/eslint-plugin-fp",
+  "author": {
+    "name": "Jeroen Engels",
+    "email": "jfm.engels@gmail.com",
+    "url": "github.com/jfmengels"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "xo && nyc ava"
+  },
+  "files": [
+    "index.js",
+    "rules"
+  ],
+  "keywords": [
+    "eslint",
+    "plugin",
+    "eslint-plugin",
+    "eslintplugin",
+    "fp",
+    "FP",
+    "function",
+    "functional",
+    "programming"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.15.2",
+    "eslint-ava-rule-tester": "^0.1.1",
+    "nyc": "^6.4.4",
+    "xo": "^0.15.1"
+  },
+  "peerDependencies": {
+    "eslint": ">=2"
+  },
+  "xo": {
+    "space": 2
+  }
+}
