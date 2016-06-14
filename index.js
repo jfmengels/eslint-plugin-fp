@@ -2,6 +2,7 @@
 
 module.exports = {
   rules: {
+    'no-class': require('./rules/no-class'),
     'no-let': require('./rules/no-let'),
     'no-mutating-assign': require('./rules/no-mutating-assign'),
     'no-mutation': require('./rules/no-mutation'),
@@ -11,6 +12,7 @@ module.exports = {
     recommended: {
       rules: {
         'no-var': 'error',
+        'fp/no-class': 'error',
         'fp/no-let': 'error',
         'fp/no-mutating-assign': 'error',
         'fp/no-mutation': 'error',
