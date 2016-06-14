@@ -24,6 +24,8 @@ Configure it in `package.json`.
 			"fp"
 		],
 		"rules": {
+      "no-var": "error",
+      "fp/no-let": "error"
 		}
 	}
 }
@@ -32,7 +34,7 @@ Configure it in `package.json`.
 
 ## Rules
 
-- (none)
+- [no-let](docs/rules/no-let.md) - Forbid the use of `let`.
 
 ## Recommended configuration
 

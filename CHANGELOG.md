@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This change log adheres to standards from [Keep a CHANGELOG](http://keepachangelog.com).
 
 ## [Unreleased]
-- (none)
+### Added
+- Added [`no-let`] rule
 
-[@jfmengels]: https://github.com/jfmengels
+[`no-let`]: ./docs/rules/no-let.md
