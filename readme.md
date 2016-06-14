@@ -27,6 +27,7 @@ Configure it in `package.json`.
       "no-var": "error",
       "fp/no-class": "error",
       "fp/no-let": "error",
+      "fp/no-loops": "error",
       "fp/no-mutation": "error",
       "fp/no-mutating-assign": "error",
       "fp/no-this": "error"
@@ -40,6 +41,7 @@ Configure it in `package.json`.
 
 - [no-class](docs/rules/no-class.md) - Forbid the use of `class`.
 - [no-let](docs/rules/no-let.md) - Forbid the use of `let`.
+- [no-loops](docs/rules/no-loops.md) - Forbid the use of loops.
 - [no-mutation](docs/rules/no-mutation.md) - Forbid the use of mutating operators.
 - [no-mutating-assign](docs/rules/no-mutating-assign.md) - Forbid the use of [`Object.assign()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) with a variable as first argument.
 - [no-this](docs/rules/no-this.md) - Forbid the use of `this`.
