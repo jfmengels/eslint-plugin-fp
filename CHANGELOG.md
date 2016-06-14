@@ -6,7 +6,9 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 ## [Unreleased]
 ### Added
 - Added [`no-let`] rule
+- Added [`no-mutation`] rule
 - Added [`no-this`] rule
 
 [`no-let`]: ./docs/rules/no-let.md
+[`no-mutation`]: ./docs/rules/no-mutation.md
 [`no-this`]: ./docs/rules/no-this.md
