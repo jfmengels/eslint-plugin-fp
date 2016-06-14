@@ -25,7 +25,8 @@ Configure it in `package.json`.
 		],
 		"rules": {
       "no-var": "error",
-      "fp/no-let": "error"
+      "fp/no-let": "error",
+      "fp/no-this": "error"
 		}
 	}
 }
@@ -35,6 +36,7 @@ Configure it in `package.json`.
 ## Rules
 
 - [no-let](docs/rules/no-let.md) - Forbid the use of `let`.
+- [no-this](docs/rules/no-this.md) - Forbid the use of `this`.
 
 ## Recommended configuration
 
