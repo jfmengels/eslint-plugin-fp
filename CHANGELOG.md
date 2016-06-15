@@ -11,6 +11,7 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 - Added [`no-mutating-assign`] rule
 - Added [`no-mutation`] rule
 - Added [`no-this`] rule
+- Added [`no-throw`] rule
 
 [`no-class`]: ./docs/rules/no-class.md
 [`no-let`]: ./docs/rules/no-let.md
@@ -18,3 +19,4 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 [`no-mutating-assign`]: ./docs/rules/no-mutating-assign.md
 [`no-mutation`]: ./docs/rules/no-mutation.md
 [`no-this`]: ./docs/rules/no-this.md
+[`no-throw`]: ./docs/rules/no-throw.md

@@ -15,24 +15,25 @@ Configure it in `package.json`.
 
 ```json
 {
-	"name": "my-awesome-project",
-	"eslintConfig": {
-		"env": {
-			"es6": true
-		},
-		"plugins": [
-			"fp"
-		],
-		"rules": {
+  "name": "my-awesome-project",
+  "eslintConfig": {
+    "env": {
+      "es6": true
+    },
+    "plugins": [
+      "fp"
+    ],
+    "rules": {
       "no-var": "error",
       "fp/no-class": "error",
       "fp/no-let": "error",
       "fp/no-loops": "error",
       "fp/no-mutation": "error",
       "fp/no-mutating-assign": "error",
-      "fp/no-this": "error"
-		}
-	}
+      "fp/no-this": "error",
+      "fp/no-throw": "error"
+    }
+  }
 }
 ```
 
@@ -45,6 +46,7 @@ Configure it in `package.json`.
 - [no-mutation](docs/rules/no-mutation.md) - Forbid the use of mutating operators.
 - [no-mutating-assign](docs/rules/no-mutating-assign.md) - Forbid the use of [`Object.assign()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) with a variable as first argument.
 - [no-this](docs/rules/no-this.md) - Forbid the use of `this`.
+- [no-throw](docs/rules/no-throw.md) - Forbid the use of `throw`.
 
 ## Recommended configuration
 
@@ -54,13 +56,13 @@ To enable this configuration, use the `extends` property in your `package.json`.
 
 ```json
 {
-	"name": "my-awesome-project",
-	"eslintConfig": {
-		"plugins": [
-			"fp"
-		],
-		"extends": "plugin:fp/recommended"
-	}
+  "name": "my-awesome-project",
+  "eslintConfig": {
+    "plugins": [
+      "fp"
+    ],
+    "extends": "plugin:fp/recommended"
+  }
 }
 ```
 
