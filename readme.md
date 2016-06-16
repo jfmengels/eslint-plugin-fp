@@ -26,6 +26,7 @@ Configure it in `package.json`.
     "rules": {
       "no-var": "error",
       "fp/no-class": "error",
+      "fp/no-delete": "error",
       "fp/no-let": "error",
       "fp/no-loops": "error",
       "fp/no-mutation": "error",
@@ -41,6 +42,7 @@ Configure it in `package.json`.
 ## Rules
 
 - [no-class](docs/rules/no-class.md) - Forbid the use of `class`.
+- [no-delete](docs/rules/no-delete.md) - Forbid the use of `delete`.
 - [no-let](docs/rules/no-let.md) - Forbid the use of `let`.
 - [no-loops](docs/rules/no-loops.md) - Forbid the use of loops.
 - [no-mutation](docs/rules/no-mutation.md) - Forbid the use of mutating operators.

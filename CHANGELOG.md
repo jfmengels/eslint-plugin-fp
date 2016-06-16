@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This change log adheres to standards from [Keep a CHANGELOG](http://keepachangelog.com).
 
 ## [Unreleased]
-- (none)
+### Added
+- Added [`no-delete`] rule
 
 ## [1.0.0] - 2016-06-15
 ### Added
@@ -16,9 +17,10 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 - Added [`no-this`] rule
 - Added [`no-throw`] rule
 
-[Unreleased]: https://github.com/jfmengels/eslint-plugin-lodash-fp/compare/v1.0.0...master
+[Unreleased]: https://github.com/jfmengels/eslint-plugin-fp/compare/v1.0.0...master
 
 [`no-class`]: ./docs/rules/no-class.md
+[`no-delete`]: ./docs/rules/no-delete.md
 [`no-let`]: ./docs/rules/no-let.md
 [`no-loops`]: ./docs/rules/no-loops.md
 [`no-mutating-assign`]: ./docs/rules/no-mutating-assign.md
