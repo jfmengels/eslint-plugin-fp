@@ -31,6 +31,7 @@ Configure it in `package.json`.
       "fp/no-loops": "error",
       "fp/no-mutating-assign": "error",
       "fp/no-mutation": "error",
+      "fp/no-nil": "error",
       "fp/no-this": "error",
       "fp/no-throw": "error",
       "fp/no-unused-expression": "error"
@@ -48,6 +49,7 @@ Configure it in `package.json`.
 - [no-loops](docs/rules/no-loops.md) - Forbid the use of loops.
 - [no-mutating-assign](docs/rules/no-mutating-assign.md) - Forbid the use of [`Object.assign()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) with a variable as first argument.
 - [no-mutation](docs/rules/no-mutation.md) - Forbid the use of mutating operators.
+- [no-nil](docs/rules/no-nil.md) - Forbid the use of `null` and `undefined`.
 - [no-this](docs/rules/no-this.md) - Forbid the use of `this`.
 - [no-throw](docs/rules/no-throw.md) - Forbid the use of `throw`.
 - [no-unused-expression](docs/rules/no-unused-expression.md) - Enforce that an expression gets used.

@@ -5,8 +5,9 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 
 ## [Unreleased]
 ### Added
-- Added [`no-unused-expression`] rule
 - Added [`no-delete`] rule
+- Added [`no-nil`] rule
+- Added [`no-unused-expression`] rule
 
 ## [1.0.0] - 2016-06-15
 ### Added
@@ -26,6 +27,7 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 [`no-loops`]: ./docs/rules/no-loops.md
 [`no-mutating-assign`]: ./docs/rules/no-mutating-assign.md
 [`no-mutation`]: ./docs/rules/no-mutation.md
+[`no-nil`]: ./docs/rules/no-nil.md
 [`no-this`]: ./docs/rules/no-this.md
 [`no-throw`]: ./docs/rules/no-throw.md
 [`no-unused-expression`]: ./docs/rules/no-unused-expression.md
