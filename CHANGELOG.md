@@ -5,6 +5,7 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 
 ## [Unreleased]
 ### Added
+- Added [`no-unused-expression`] rule
 - Added [`no-delete`] rule
 
 ## [1.0.0] - 2016-06-15
@@ -27,3 +28,4 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 [`no-mutation`]: ./docs/rules/no-mutation.md
 [`no-this`]: ./docs/rules/no-this.md
 [`no-throw`]: ./docs/rules/no-throw.md
+[`no-unused-expression`]: ./docs/rules/no-unused-expression.md
