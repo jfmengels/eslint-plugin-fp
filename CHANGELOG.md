@@ -5,6 +5,7 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 
 ## [Unreleased]
 ### Added
+- Added `exceptions` option to [`no-mutation`]
 - Added [`no-events`] rule
 - Added [`no-get-set`] rule
 

@@ -49,6 +49,50 @@ ruleTester.run('no-mutation', rule, {
     {
       code: 'module.exports.foo.bar = {};',
       options: [{commonjs: true}]
+    },
+    {
+      code: 'foo.bar = {};',
+      options: [{exceptions: [
+        {object: 'foo', property: 'bar'}
+      ]}]
+    },
+    {
+      code: 'foo.bar = {};',
+      options: [{exceptions: [
+        {object: 'foo'}
+      ]}]
+    },
+    {
+      code: 'baz.propTypes = {};',
+      options: [{exceptions: [
+        {property: 'propTypes'}
+      ]}]
+    },
+    {
+      code: 'module.exports = {};',
+      options: [{exceptions: [
+        {object: 'module', property: 'exports'}
+      ]}]
+    },
+    {
+      code: 'module.exports[foo].bar = {};',
+      options: [{exceptions: [
+        {object: 'module', property: 'exports'}
+      ]}]
+    },
+    {
+      code: 'module.exports.foo = {};',
+      options: [{exceptions: [
+        {object: 'foo', property: 'bar'},
+        {object: 'module', property: 'exports'}
+      ]}]
+    },
+    {
+      code: 'foo.bar = {};',
+      options: [{exceptions: [
+        {object: 'foo', property: 'bar'},
+        {object: 'module', property: 'exports'}
+      ]}]
     }
   ],
   invalid: [
@@ -147,6 +191,32 @@ ruleTester.run('no-mutation', rule, {
     {
       code: 'module.exports[foo].bar = {};',
       errors: [commonJsError]
+    },
+    {
+      code: 'foo.bar = {};',
+      options: [{exceptions: [
+        {object: 'foo', property: 'boo'}
+      ]}],
+      errors: [reassignmentError]
+    },
+    {
+      code: 'baz.propTypes = {};',
+      options: [{exceptions: [
+        {object: 'foo'}
+      ]}],
+      errors: [reassignmentError]
+    },
+    {
+      code: 'baz.propTypes = {};',
+      options: [{exceptions: [
+        {property: 'props'}
+      ]}],
+      errors: [reassignmentError]
+    },
+    {
+      code: 'baz.propTypes = {};',
+      options: [{exceptions: [{}]}],
+      errors: [reassignmentError]
     }
   ]
 });

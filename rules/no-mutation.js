@@ -42,13 +42,39 @@ function errorMessage(isCommonJs) {
   return baseMessage + (isCommonJs ? '. You may want to activate the `commonjs` option for this rule' : '');
 }
 
+function makeException(exception) {
+  if (!exception.object && !exception.property) {
+    return _.stubFalse;
+  }
+  var query = {type: 'MemberExpression'};
+  if (exception.object) {
+    query = _.assign(query, {object: {type: 'Identifier', name: exception.object}});
+  }
+  if (exception.property) {
+    query = _.assign(query, {property: {type: 'Identifier', name: exception.property}});
+  }
+  return _.matches(query);
+}
+
+function isExempted(exceptions, node) {
+  if (node.type !== 'MemberExpression') {
+    return false;
+  }
+  var matches = exceptions.some(function (matcher) {
+    return matcher(node);
+  });
+  return matches ||
+    (node.object.type === 'MemberExpression' && isExempted(exceptions, node.object));
+}
+
 module.exports = function (context) {
   var options = context.options[0] || {};
   var acceptCommonJs = options.commonjs;
+  var exceptions = _.map(makeException, options.exceptions);
   return {
     AssignmentExpression: function (node) {
       var isCommonJs = isCommonJsExport(node);
-      if (isCommonJs && acceptCommonJs) {
+      if ((isCommonJs && acceptCommonJs) || isExempted(exceptions, node.left)) {
         return;
       }
       context.report({
@@ -70,6 +96,20 @@ module.exports.schema = [{
   properties: {
     commonjs: {
       type: 'boolean'
+    },
+    exceptions: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          object: {
+            type: 'string'
+          },
+          property: {
+            type: 'string'
+          }
+        }
+      }
     }
   }
 }];
