@@ -11,7 +11,7 @@ const ruleTester = avaRuleTester(test, {
   }
 });
 
-const error = (message) => ({
+const error = message => ({
   ruleId: 'no-mutation',
   message
 });
