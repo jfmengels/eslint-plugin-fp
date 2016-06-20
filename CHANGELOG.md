@@ -6,6 +6,7 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 ## [Unreleased]
 ### Added
 - Added [`no-events`] rule
+- Added [`no-get-set`] rule
 
 ## [1.1.0] - 2016-06-16
 ### Added
@@ -28,6 +29,8 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 
 [`no-class`]: ./docs/rules/no-class.md
 [`no-delete`]: ./docs/rules/no-delete.md
+[`no-events`]: ./docs/rules/no-events.md
+[`no-get-set`]: ./docs/rules/no-get-set.md
 [`no-let`]: ./docs/rules/no-let.md
 [`no-loops`]: ./docs/rules/no-loops.md
 [`no-mutating-assign`]: ./docs/rules/no-mutating-assign.md
