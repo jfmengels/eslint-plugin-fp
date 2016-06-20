@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This change log adheres to standards from [Keep a CHANGELOG](http://keepachangelog.com).
 
 ## [Unreleased]
-- (none)
+### Added
+- Added [`no-events`] rule
 
 ## [1.1.0] - 2016-06-16
 ### Added

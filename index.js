@@ -4,6 +4,7 @@ module.exports = {
   rules: {
     'no-class': require('./rules/no-class'),
     'no-delete': require('./rules/no-delete'),
+    'no-events': require('./rules/no-let'),
     'no-let': require('./rules/no-let'),
     'no-loops': require('./rules/no-loops'),
     'no-mutating-assign': require('./rules/no-mutating-assign'),
@@ -19,6 +20,7 @@ module.exports = {
         'no-var': 'error',
         'fp/no-class': 'error',
         'fp/no-delete': 'error',
+        'fp/no-events': 'error',
         'fp/no-let': 'error',
         'fp/no-loops': 'error',
         'fp/no-mutating-assign': 'error',

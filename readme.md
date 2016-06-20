@@ -27,6 +27,7 @@ Configure it in `package.json`.
       "no-var": "error",
       "fp/no-class": "error",
       "fp/no-delete": "error",
+      "fp/no-events": "error",
       "fp/no-let": "error",
       "fp/no-loops": "error",
       "fp/no-mutating-assign": "error",
@@ -45,6 +46,7 @@ Configure it in `package.json`.
 
 - [no-class](docs/rules/no-class.md) - Forbid the use of `class`.
 - [no-delete](docs/rules/no-delete.md) - Forbid the use of `delete`.
+- [no-events](docs/rules/no-events.md) - Forbid the use of the `events` module.
 - [no-let](docs/rules/no-let.md) - Forbid the use of `let`.
 - [no-loops](docs/rules/no-loops.md) - Forbid the use of loops.
 - [no-mutating-assign](docs/rules/no-mutating-assign.md) - Forbid the use of [`Object.assign()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) with a variable as first argument.
