@@ -71,6 +71,9 @@ module.exports = function (context) {
   var options = context.options[0] || {};
   var acceptCommonJs = options.commonjs;
   var exceptions = _.map(makeException, options.exceptions);
+  if (options.allowThis) {
+    exceptions.push(_.matches({type: 'MemberExpression', object: {type: 'ThisExpression'}}));
+  }
   return {
     AssignmentExpression: function (node) {
       var isCommonJs = isCommonJsExport(node);
@@ -95,6 +98,9 @@ module.exports.schema = [{
   type: 'object',
   properties: {
     commonjs: {
+      type: 'boolean'
+    },
+    allowThis: {
       type: 'boolean'
     },
     exceptions: {

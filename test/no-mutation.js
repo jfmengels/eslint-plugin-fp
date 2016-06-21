@@ -93,6 +93,18 @@ ruleTester.run('no-mutation', rule, {
         {object: 'foo', property: 'bar'},
         {object: 'module', property: 'exports'}
       ]}]
+    },
+    {
+      code: 'this.foo = 100;',
+      options: [{allowThis: true}]
+    },
+    {
+      code: 'this.foo.bar = 100;',
+      options: [{allowThis: true}]
+    },
+    {
+      code: 'function bar() { this.foo = 100; }',
+      options: [{allowThis: true}]
     }
   ],
   invalid: [
@@ -216,6 +228,18 @@ ruleTester.run('no-mutation', rule, {
     {
       code: 'baz.propTypes = {};',
       options: [{exceptions: [{}]}],
+      errors: [reassignmentError]
+    },
+    {
+      code: 'this.foo = 100;',
+      errors: [reassignmentError]
+    },
+    {
+      code: 'this.foo.bar = 100;',
+      errors: [reassignmentError]
+    },
+    {
+      code: 'function bar() { this.foo = 100; }',
       errors: [reassignmentError]
     }
   ]

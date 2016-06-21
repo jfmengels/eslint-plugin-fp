@@ -8,6 +8,8 @@ This rule supports the following options:
 
 `commonjs`: If set to `true`, then this rule will not report when assigning to or to a (sub-) property of `exports` or `module.exports`. Note that this will not report when reassigning or overwriting previous exports.
 
+`allowThis`: If set to `true`, then this rule will not report when assigning to or to a (sub-) property of `this`.
+
 `exceptions`: List of objects that describe exceptions to the rule. Each exception should have either or both `object` and `property` field set.
 
 You can set the options like this:
@@ -15,6 +17,7 @@ You can set the options like this:
 ```js
 "fp/no-mutation": ["error", {
   "commonjs": true,
+  "allowThis": true,
   "exceptions": [
     {"object": "foo", "property": "bar"}
   ]
