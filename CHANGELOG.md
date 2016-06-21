@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This change log adheres to standards from [Keep a CHANGELOG](http://keepachangelog.com).
 
 ## [Unreleased]
+- (none)
+
+## [1.3.0] - 2016-06-22
 ### Added
 - Added `allowThis` option to [`no-mutation`]
 
@@ -29,7 +32,8 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 - Added [`no-this`] rule
 - Added [`no-throw`] rule
 
-[Unreleased]: https://github.com/jfmengels/eslint-plugin-fp/compare/v1.2.0...master
+[Unreleased]: https://github.com/jfmengels/eslint-plugin-fp/compare/v1.3.0...master
+[1.3.0]: https://github.com/jfmengels/eslint-plugin-fp/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/jfmengels/eslint-plugin-fp/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/jfmengels/eslint-plugin-fp/compare/v1.0.0...v1.1.0
 
