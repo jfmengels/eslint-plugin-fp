@@ -16,7 +16,7 @@ function report(context, node) {
   });
 }
 
-module.exports = function (context) {
+const create = function (context) {
   return {
     ImportDeclaration(node) {
       if (node.source.value === 'events') {
@@ -29,4 +29,13 @@ module.exports = function (context) {
       }
     }
   };
+};
+
+module.exports = {
+  create,
+  meta: {
+    docs: {
+      recommended: 'error'
+    }
+  }
 };

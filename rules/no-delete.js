@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function (context) {
+const create = function (context) {
   return {
     UnaryExpression(node) {
       if (node.operator === 'delete') {
@@ -11,4 +11,13 @@ module.exports = function (context) {
       }
     }
   };
+};
+
+module.exports = {
+  create,
+  meta: {
+    docs: {
+      recommended: 'error'
+    }
+  }
 };

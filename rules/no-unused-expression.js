@@ -9,7 +9,7 @@ const hasSideEffect = _.overSome([
   {type: 'UnaryExpression', operator: 'delete'}
 ]);
 
-module.exports = function (context) {
+const create = function (context) {
   return {
     ExpressionStatement(node) {
       if (!hasSideEffect(node.expression)) {
@@ -28,4 +28,13 @@ module.exports = function (context) {
       }
     }
   };
+};
+
+module.exports = {
+  create,
+  meta: {
+    docs: {
+      recommended: 'error'
+    }
+  }
 };

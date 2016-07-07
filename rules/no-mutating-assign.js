@@ -19,7 +19,7 @@ const isObjectExpression = _.flow(
   _.includes(_, ['ObjectExpression', 'ArrayExpression'])
 );
 
-module.exports = function (context) {
+const create = function (context) {
   return {
     CallExpression(node) {
       if (isObjectAssign(node.callee) && !isObjectExpression(node.arguments[0])) {
@@ -30,4 +30,13 @@ module.exports = function (context) {
       }
     }
   };
+};
+
+module.exports = {
+  create,
+  meta: {
+    docs: {
+      recommended: 'error'
+    }
+  }
 };

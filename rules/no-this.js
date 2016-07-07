@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function (context) {
+const create = function (context) {
   return {
     ThisExpression(node) {
       context.report({
@@ -9,4 +9,13 @@ module.exports = function (context) {
       });
     }
   };
+};
+
+module.exports = {
+  create,
+  meta: {
+    docs: {
+      recommended: 'error'
+    }
+  }
 };

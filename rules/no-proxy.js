@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function (context) {
+const create = function (context) {
   return {
     Identifier(node) {
       if (node.name === 'Proxy') {
@@ -11,4 +11,13 @@ module.exports = function (context) {
       }
     }
   };
+};
+
+module.exports = {
+  create,
+  meta: {
+    docs: {
+      recommended: 'error'
+    }
+  }
 };

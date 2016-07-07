@@ -65,7 +65,7 @@ function isExempted(exceptions, node) {
     (node.object.type === 'MemberExpression' && isExempted(exceptions, node.object));
 }
 
-module.exports = function (context) {
+const create = function (context) {
   const options = context.options[0] || {};
   const acceptCommonJs = options.commonjs;
   const exceptions = _.map(makeException, options.exceptions);
@@ -92,7 +92,7 @@ module.exports = function (context) {
   };
 };
 
-module.exports.schema = [{
+const schema = [{
   type: 'object',
   properties: {
     commonjs: {
@@ -117,3 +117,13 @@ module.exports.schema = [{
     }
   }
 }];
+
+module.exports = {
+  create,
+  meta: {
+    schema,
+    docs: {
+      recommended: 'error'
+    }
+  }
+};

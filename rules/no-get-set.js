@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function (context) {
+const create = function (context) {
   return {
     Property(node) {
       if (node.kind === 'get' || node.kind === 'set') {
@@ -11,4 +11,13 @@ module.exports = function (context) {
       }
     }
   };
+};
+
+module.exports = {
+  create,
+  meta: {
+    docs: {
+      recommended: 'error'
+    }
+  }
 };

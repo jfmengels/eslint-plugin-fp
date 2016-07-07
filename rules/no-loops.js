@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function (context) {
+const create = function (context) {
   function reportForLoop(node) {
     context.report({
       node,
@@ -23,4 +23,13 @@ module.exports = function (context) {
     WhileStatement: reportWhileLoop,
     DoWhileStatement: reportWhileLoop
   };
+};
+
+module.exports = {
+  create,
+  meta: {
+    docs: {
+      recommended: 'error'
+    }
+  }
 };

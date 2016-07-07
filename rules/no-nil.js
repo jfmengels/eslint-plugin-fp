@@ -33,7 +33,7 @@ function reportFunctions(context, node) {
   }
 }
 
-module.exports = function (context) {
+const create = function (context) {
   const reportFunc = _.partial(reportFunctions, [context]);
   return {
     Literal(node) {
@@ -66,4 +66,13 @@ module.exports = function (context) {
     FunctionDeclaration: reportFunc,
     FunctionExpression: reportFunc
   };
+};
+
+module.exports = {
+  create,
+  meta: {
+    docs: {
+      recommended: 'error'
+    }
+  }
 };
