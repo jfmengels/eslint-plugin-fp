@@ -13,7 +13,7 @@ const ruleTester = avaRuleTester(test, {
 
 const error = {
   ruleId: 'no-mutating-assign',
-  message: 'Unallowed use mutating `Object.assign`'
+  message: 'Unallowed use of mutating `Object.assign`'
 };
 
 ruleTester.run('no-mutating-assign', rule, {

@@ -25,7 +25,7 @@ const create = function (context) {
       if (isObjectAssign(node.callee) && !isObjectExpression(node.arguments[0])) {
         context.report({
           node,
-          message: 'Unallowed use mutating `Object.assign`'
+          message: 'Unallowed use of mutating `Object.assign`'
         });
       }
     }

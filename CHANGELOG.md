@@ -8,6 +8,8 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 - Support for Node < v4
 ### Added
 - Added [`no-proxy`] rule
+### Fixed
+- Fixed error in [`no-mutating-assign`] report message
 
 ## [1.3.0] - 2016-06-22
 ### Added
