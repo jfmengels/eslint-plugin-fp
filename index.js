@@ -1,21 +1,11 @@
 'use strict';
 
+const reqAll = require('req-all');
+
+const rules = reqAll('rules', {camelize: false});
+
 module.exports = {
-  rules: {
-    'no-class': require('./rules/no-class'),
-    'no-delete': require('./rules/no-delete'),
-    'no-events': require('./rules/no-let'),
-    'no-get-set': require('./rules/no-let'),
-    'no-let': require('./rules/no-let'),
-    'no-loops': require('./rules/no-loops'),
-    'no-mutating-assign': require('./rules/no-mutating-assign'),
-    'no-mutation': require('./rules/no-mutation'),
-    'no-nil': require('./rules/no-nil'),
-    'no-proxy': require('./rules/no-proxy'),
-    'no-this': require('./rules/no-this'),
-    'no-throw': require('./rules/no-throw'),
-    'no-unused-expression': require('./rules/no-unused-expression')
-  },
+  rules,
   configs: {
     recommended: {
       rules: {
