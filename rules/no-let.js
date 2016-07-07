@@ -2,10 +2,10 @@
 
 module.exports = function (context) {
   return {
-    VariableDeclaration: function (node) {
+    VariableDeclaration(node) {
       if (node.kind === 'let') {
         context.report({
-          node: node,
+          node,
           message: 'Unallowed use of `let`. Use `const` instead'
         });
       }

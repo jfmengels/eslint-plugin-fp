@@ -1,8 +1,8 @@
 'use strict';
 
-var _ = require('lodash/fp');
+const _ = require('lodash/fp');
 
-var hasSideEffect = _.overSome([
+const hasSideEffect = _.overSome([
   {type: 'AssignmentExpression'},
   {type: 'UpdateExpression', operator: '++'},
   {type: 'UpdateExpression', operator: '--'},
@@ -11,18 +11,18 @@ var hasSideEffect = _.overSome([
 
 module.exports = function (context) {
   return {
-    ExpressionStatement: function (node) {
+    ExpressionStatement(node) {
       if (!hasSideEffect(node.expression)) {
         context.report({
-          node: node,
+          node,
           message: 'Unused expression'
         });
       }
     },
-    SequenceExpression: function (node) {
+    SequenceExpression(node) {
       if (!node.parent || node.parent.type !== 'ExpressionStatement') { // Avoid duplicate errors
         context.report({
-          node: node,
+          node,
           message: 'Unused expression'
         });
       }

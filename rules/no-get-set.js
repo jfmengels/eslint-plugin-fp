@@ -2,11 +2,11 @@
 
 module.exports = function (context) {
   return {
-    Property: function (node) {
+    Property(node) {
       if (node.kind === 'get' || node.kind === 'set') {
         context.report({
-          node: node,
-          message: 'Unallowed use of `' + node.kind + '`'
+          node,
+          message: `Unallowed use of \`${node.kind}\``
         });
       }
     }

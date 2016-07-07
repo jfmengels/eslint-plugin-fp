@@ -11,19 +11,19 @@ function isStaticRequire(node) {
 
 function report(context, node) {
   context.report({
-    node: node,
+    node,
     message: 'Unallowed use of `events`'
   });
 }
 
 module.exports = function (context) {
   return {
-    ImportDeclaration: function (node) {
+    ImportDeclaration(node) {
       if (node.source.value === 'events') {
         report(context, node);
       }
     },
-    CallExpression: function (node) {
+    CallExpression(node) {
       if (isStaticRequire(node) && node.arguments[0].value === 'events') {
         report(context, node);
       }

@@ -2,10 +2,10 @@
 
 module.exports = function (context) {
   return {
-    Identifier: function (node) {
+    Identifier(node) {
       if (node.name === 'Proxy') {
         context.report({
-          node: node,
+          node,
           message: 'Unallowed use of `Proxy`'
         });
       }

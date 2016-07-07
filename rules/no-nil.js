@@ -1,6 +1,6 @@
 'use strict';
 
-var _ = require('lodash/fp');
+const _ = require('lodash/fp');
 
 function isComparison(node) {
   return node.parent &&
@@ -11,13 +11,13 @@ function isComparison(node) {
 function reportUseOutsideOfComparison(context, node) {
   if (!isComparison(node)) {
     context.report({
-      node: node,
+      node,
       message: 'Unallowed use of `null` or `undefined`'
     });
   }
 }
 
-var endsWithReturnStatement = _.flow(
+const endsWithReturnStatement = _.flow(
   _.last,
   _.matches({type: 'ReturnStatement'})
 );
@@ -27,37 +27,37 @@ function reportFunctions(context, node) {
     !endsWithReturnStatement(node.body.body)
   ) {
     context.report({
-      node: node,
+      node,
       message: 'Function must end with a return statement, so that it doesn\'t return `undefined`'
     });
   }
 }
 
 module.exports = function (context) {
-  var reportFunc = _.partial(reportFunctions, [context]);
+  const reportFunc = _.partial(reportFunctions, [context]);
   return {
-    Literal: function (node) {
+    Literal(node) {
       if (node.value === null) {
         reportUseOutsideOfComparison(context, node);
       }
     },
-    Identifier: function (node) {
+    Identifier(node) {
       if (node.name === 'undefined') {
         reportUseOutsideOfComparison(context, node);
       }
     },
-    VariableDeclarator: function (node) {
+    VariableDeclarator(node) {
       if (node.init === null) {
         context.report({
-          node: node,
+          node,
           message: 'Variable must be initialized, so that it doesn\'t evaluate to `undefined`'
         });
       }
     },
-    ReturnStatement: function (node) {
+    ReturnStatement(node) {
       if (node.argument === null) {
         context.report({
-          node: node,
+          node,
           message: 'Return statement must return an explicit value, so that it doesn\'t evaluate to `undefined`'
         });
       }

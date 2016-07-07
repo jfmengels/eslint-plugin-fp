@@ -2,9 +2,9 @@
 
 module.exports = function (context) {
   return {
-    ThisExpression: function (node) {
+    ThisExpression(node) {
       context.report({
-        node: node,
+        node,
         message: 'Unallowed use of `this`'
       });
     }

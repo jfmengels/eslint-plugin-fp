@@ -1,8 +1,8 @@
 'use strict';
 
-var _ = require('lodash/fp');
+const _ = require('lodash/fp');
 
-var isModuleExports = _.matches({
+const isModuleExports = _.matches({
   type: 'MemberExpression',
   object: {
     type: 'Identifier',
@@ -14,7 +14,7 @@ var isModuleExports = _.matches({
   }
 });
 
-var isExports = _.matches({
+const isExports = _.matches({
   type: 'Identifier', name: 'exports'
 });
 
@@ -28,7 +28,7 @@ function isModuleExportsMemberExpression(node) {
   ])(node);
 }
 
-var isCommonJsExport = _.flow(
+const isCommonJsExport = _.flow(
   _.property('left'),
   _.overSome([
     isExports,
@@ -38,7 +38,7 @@ var isCommonJsExport = _.flow(
 );
 
 function errorMessage(isCommonJs) {
-  var baseMessage = 'Unallowed reassignment';
+  const baseMessage = 'Unallowed reassignment';
   return baseMessage + (isCommonJs ? '. You may want to activate the `commonjs` option for this rule' : '');
 }
 
@@ -46,7 +46,7 @@ function makeException(exception) {
   if (!exception.object && !exception.property) {
     return _.stubFalse;
   }
-  var query = {type: 'MemberExpression'};
+  let query = {type: 'MemberExpression'};
   if (exception.object) {
     query = _.assign(query, {object: {type: 'Identifier', name: exception.object}});
   }
@@ -60,35 +60,33 @@ function isExempted(exceptions, node) {
   if (node.type !== 'MemberExpression') {
     return false;
   }
-  var matches = exceptions.some(function (matcher) {
-    return matcher(node);
-  });
+  const matches = exceptions.some(matcher => matcher(node));
   return matches ||
     (node.object.type === 'MemberExpression' && isExempted(exceptions, node.object));
 }
 
 module.exports = function (context) {
-  var options = context.options[0] || {};
-  var acceptCommonJs = options.commonjs;
-  var exceptions = _.map(makeException, options.exceptions);
+  const options = context.options[0] || {};
+  const acceptCommonJs = options.commonjs;
+  const exceptions = _.map(makeException, options.exceptions);
   if (options.allowThis) {
     exceptions.push(_.matches({type: 'MemberExpression', object: {type: 'ThisExpression'}}));
   }
   return {
-    AssignmentExpression: function (node) {
-      var isCommonJs = isCommonJsExport(node);
+    AssignmentExpression(node) {
+      const isCommonJs = isCommonJsExport(node);
       if ((isCommonJs && acceptCommonJs) || isExempted(exceptions, node.left)) {
         return;
       }
       context.report({
-        node: node,
+        node,
         message: errorMessage(isCommonJs)
       });
     },
-    UpdateExpression: function (node) {
+    UpdateExpression(node) {
       context.report({
-        node: node,
-        message: 'Unallowed use of `' + node.operator + '` operator'
+        node,
+        message: `Unallowed use of \`${node.operator}\` operator`
       });
     }
   };

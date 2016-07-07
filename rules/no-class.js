@@ -2,9 +2,9 @@
 
 module.exports = function (context) {
   return {
-    ClassDeclaration: function (node) {
+    ClassDeclaration(node) {
       context.report({
-        node: node,
+        node,
         message: 'Unallowed use of `class`. Use functions instead'
       });
     }

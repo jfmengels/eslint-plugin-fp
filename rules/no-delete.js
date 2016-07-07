@@ -2,10 +2,10 @@
 
 module.exports = function (context) {
   return {
-    UnaryExpression: function (node) {
+    UnaryExpression(node) {
       if (node.operator === 'delete') {
         context.report({
-          node: node,
+          node,
           message: 'Unallowed use of `delete`'
         });
       }

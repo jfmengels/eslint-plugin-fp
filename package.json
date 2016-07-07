@@ -52,6 +52,7 @@
     "eslint": ">=3"
   },
   "xo": {
+    "esnext": true,
     "space": 2
   }
 }

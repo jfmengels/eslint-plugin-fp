@@ -2,9 +2,9 @@
 
 module.exports = function (context) {
   return {
-    ThrowStatement: function (node) {
+    ThrowStatement(node) {
       context.report({
-        node: node,
+        node,
         message: 'Unallowed use of `throw`'
       });
     }
