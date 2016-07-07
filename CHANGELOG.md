@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This change log adheres to standards from [Keep a CHANGELOG](http://keepachangelog.com).
 
 ## [Unreleased]
-- (none)
+### Added
+- Added [`no-proxy`] rule
 
 ## [1.3.0] - 2016-06-22
 ### Added
@@ -46,6 +47,7 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 [`no-mutating-assign`]: ./docs/rules/no-mutating-assign.md
 [`no-mutation`]: ./docs/rules/no-mutation.md
 [`no-nil`]: ./docs/rules/no-nil.md
+[`no-proxy`]: ./docs/rules/no-proxy.md
 [`no-this`]: ./docs/rules/no-this.md
 [`no-throw`]: ./docs/rules/no-throw.md
 [`no-unused-expression`]: ./docs/rules/no-unused-expression.md
