@@ -3,7 +3,7 @@ import test from 'ava';
 import pify from 'pify';
 import index from '../';
 
-test('Every rule is defined in index file', async t => {
+test('every rule should defined in the index file and recommended settings', async t => {
   const files = await pify(fs.readdir, Promise)('../rules/');
   const rules = files.filter(file => file.indexOf('.js') === file.length - 3);
 
@@ -15,4 +15,8 @@ test('Every rule is defined in index file', async t => {
 
   t.is(Object.keys(index.rules).length, rules.length,
     'There are more exported rules than rule files.');
+});
+
+test('no-var should be turned on in the recommended settings', async t => {
+  t.true(index.configs.recommended.rules['no-var'] === 'error');
 });
