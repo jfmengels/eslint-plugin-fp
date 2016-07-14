@@ -123,6 +123,7 @@ module.exports = {
   meta: {
     schema,
     docs: {
+      description: 'Forbid the use of mutating operators.',
       recommended: 'error'
     }
   }

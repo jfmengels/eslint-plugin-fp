@@ -15,6 +15,7 @@ module.exports = {
   create,
   meta: {
     docs: {
+      description: 'Forbid the use of `this`.',
       recommended: 'error'
     }
   }

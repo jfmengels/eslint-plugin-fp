@@ -29,6 +29,7 @@ module.exports = {
   create,
   meta: {
     docs: {
+      description: 'Forbid the use of loops.',
       recommended: 'error'
     }
   }

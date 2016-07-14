@@ -36,6 +36,7 @@ module.exports = {
   create,
   meta: {
     docs: {
+      description: 'Forbid the use of [`Object.assign()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) with a variable as first argument.',
       recommended: 'error'
     }
   }

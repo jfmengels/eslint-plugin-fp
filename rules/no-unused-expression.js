@@ -34,6 +34,7 @@ module.exports = {
   create,
   meta: {
     docs: {
+      description: 'Enforce that an expression gets used.',
       recommended: 'error'
     }
   }

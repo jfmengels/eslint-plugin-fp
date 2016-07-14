@@ -17,6 +17,7 @@ module.exports = {
   create,
   meta: {
     docs: {
+      description: 'Forbid the use of `let`.',
       recommended: 'error'
     }
   }

@@ -13,6 +13,7 @@ $ npm install --save-dev eslint eslint-plugin-fp
 
 Configure it in `package.json`.
 
+<!-- EXAMPLE_CONFIGURATION:START -->
 ```json
 {
   "name": "my-awesome-project",
@@ -24,10 +25,10 @@ Configure it in `package.json`.
       "fp"
     ],
     "rules": {
-      "no-var": "error",
       "fp/no-class": "error",
       "fp/no-delete": "error",
       "fp/no-events": "error",
+      "fp/no-get-set": "error",
       "fp/no-let": "error",
       "fp/no-loops": "error",
       "fp/no-mutating-assign": "error",
@@ -36,15 +37,18 @@ Configure it in `package.json`.
       "fp/no-proxy": "error",
       "fp/no-this": "error",
       "fp/no-throw": "error",
-      "fp/no-unused-expression": "error"
+      "fp/no-unused-expression": "error",
+      "no-var": "error"
     }
   }
 }
 ```
+<!-- EXAMPLE_CONFIGURATION:END -->
 
 
 ## Rules
 
+<!-- RULES:START -->
 - [no-class](docs/rules/no-class.md) - Forbid the use of `class`.
 - [no-delete](docs/rules/no-delete.md) - Forbid the use of `delete`.
 - [no-events](docs/rules/no-events.md) - Forbid the use of the `events` module.
@@ -58,6 +62,7 @@ Configure it in `package.json`.
 - [no-this](docs/rules/no-this.md) - Forbid the use of `this`.
 - [no-throw](docs/rules/no-throw.md) - Forbid the use of `throw`.
 - [no-unused-expression](docs/rules/no-unused-expression.md) - Enforce that an expression gets used.
+<!-- RULES:END -->
 
 ## Recommended configuration
 

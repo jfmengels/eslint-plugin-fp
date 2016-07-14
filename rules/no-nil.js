@@ -72,6 +72,7 @@ module.exports = {
   create,
   meta: {
     docs: {
+      description: 'Forbid the use of `null` and `undefined`.',
       recommended: 'error'
     }
   }
