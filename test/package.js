@@ -10,6 +10,8 @@ test('every rule should defined in the index file and recommended settings', asy
   rules.forEach(file => {
     const name = file.slice(0, -3);
     t.truthy(index.rules[name], `'${name}' is not exported in 'index.js'`);
+    t.truthy(index.rules[name].meta.docs.description, `'${name}' does not have a description`);
+    t.truthy(index.rules[name].meta.docs.recommended, `'${name}' does not have a recommended setting`);
     t.truthy(index.configs.recommended.rules[`fp/${name}`], `'${name}' is not set in the recommended config`);
   });
 
