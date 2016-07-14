@@ -1,26 +1,24 @@
 'use strict';
 
 const reqAll = require('req-all');
+const createIndex = require('create-eslint-index');
 
 const rules = reqAll('rules', {camelize: false});
 
-const externalRecommendedRules = [
-  ['no-var', 'error']
-];
+const externalRecommendedRules = {
+  'no-var': 'error'
+};
 
-const recommendedRules = Object.keys(rules)
-  .map(key => [[`fp/${key}`], rules[key].meta.docs.recommended])
-  .concat(externalRecommendedRules)
-  .reduce((res, item) => {
-    res[item[0]] = item[1];
-    return res;
-  }, {});
+const internalRecommendedRules = createIndex.createConfig({
+  plugin: 'fp',
+  field: 'meta.docs.recommended'
+}, rules);
 
 module.exports = {
   rules,
   configs: {
     recommended: {
-      rules: recommendedRules
+      rules: Object.assign({}, internalRecommendedRules, externalRecommendedRules)
     }
   }
 };
