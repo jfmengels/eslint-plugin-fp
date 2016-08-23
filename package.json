@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-fp",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "description": "ESLint rules for functional programming",
   "license": "MIT",
   "repository": "jfmengels/eslint-plugin-fp",
