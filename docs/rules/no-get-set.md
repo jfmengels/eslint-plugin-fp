@@ -20,6 +20,14 @@ const person = {
     }
   }: 20
 };
+
+person.__defineGetter__('name', function() {
+  return this.name || 'John Doe';
+});
+
+person.__defineSetter__('name', function(name) {
+  this.name = name.trim();
+});
 ```
 
 ### Pass

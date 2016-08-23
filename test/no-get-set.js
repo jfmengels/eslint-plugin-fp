@@ -21,7 +21,9 @@ const setError = error('Unallowed use of `set`');
 ruleTester.run('no-get-set', rule, {
   valid: [
     'var obj = {foo: "bar"}',
-    'var obj = {foo: "bar", bar: 1, baz: {}}'
+    'var obj = {foo: "bar", bar: 1, baz: {}}',
+    'obj.foo()',
+    'foo()'
   ],
   invalid: [
     {
@@ -47,6 +49,22 @@ ruleTester.run('no-get-set', rule, {
     {
       code: 'var obj = { get foo () {}, set foo (a) {} }',
       errors: [getError, setError]
+    },
+    {
+      code: 'person.__defineGetter__("name", fn);',
+      errors: [error('Unallowed use of a getter using `__defineGetter__`')]
+    },
+    {
+      code: 'person.__defineSetter__("name", fn);',
+      errors: [error('Unallowed use of a setter using `__defineSetter__`')]
+    },
+    {
+      code: 'person["__defineGetter__"]("name", fn);',
+      errors: [error('Unallowed use of a getter using `__defineGetter__`')]
+    },
+    {
+      code: 'person["__defineSetter__"]("name", fn);',
+      errors: [error('Unallowed use of a setter using `__defineSetter__`')]
     }
   ]
 });
