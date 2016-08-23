@@ -6,10 +6,12 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 ## [2.0.0] - 2016-08-24
 ### Removed
 - **Breaking**: Removed support for Node < v4
+
 ### Added
 - Added [`no-proxy`] rule
 - Added [`no-mutating-methods`] rule
 - Added error reports when using `object.__defineSetter__()` or `object.__defineGetter__()` in [`no-get-set`] rule
+
 ### Fixed
 - Fixed error in [`no-mutating-assign`] report message
 
