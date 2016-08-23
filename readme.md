@@ -32,6 +32,7 @@ Configure it in `package.json`.
       "fp/no-let": "error",
       "fp/no-loops": "error",
       "fp/no-mutating-assign": "error",
+      "fp/no-mutating-methods": "error",
       "fp/no-mutation": "error",
       "fp/no-nil": "error",
       "fp/no-proxy": "error",
@@ -56,6 +57,7 @@ Configure it in `package.json`.
 - [no-let](docs/rules/no-let.md) - Forbid the use of `let`.
 - [no-loops](docs/rules/no-loops.md) - Forbid the use of loops.
 - [no-mutating-assign](docs/rules/no-mutating-assign.md) - Forbid the use of [`Object.assign()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) with a variable as first argument.
+- [no-mutating-methods](docs/rules/no-mutating-methods.md) - Forbid the use of mutating methods.
 - [no-mutation](docs/rules/no-mutation.md) - Forbid the use of mutating operators.
 - [no-nil](docs/rules/no-nil.md) - Forbid the use of `null` and `undefined`.
 - [no-proxy](docs/rules/no-proxy.md) - Forbid the use of `Proxy`.
