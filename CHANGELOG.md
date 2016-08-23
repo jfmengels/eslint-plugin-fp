@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 This change log adheres to standards from [Keep a CHANGELOG](http://keepachangelog.com).
 
-## [2.0.0] - 2016-07-14
+## [2.0.0] - 2016-08-24
 ### Removed
 - **Breaking**: Removed support for Node < v4
 ### Added
@@ -39,7 +39,8 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 - Added [`no-this`] rule
 - Added [`no-throw`] rule
 
-[Unreleased]: https://github.com/jfmengels/eslint-plugin-fp/compare/v1.3.0...master
+[Unreleased]: https://github.com/jfmengels/eslint-plugin-fp/compare/v2.0.0...master
+[2.0.0]: https://github.com/jfmengels/eslint-plugin-fp/compare/v1.3.0...v2.0.0
 [1.3.0]: https://github.com/jfmengels/eslint-plugin-fp/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/jfmengels/eslint-plugin-fp/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/jfmengels/eslint-plugin-fp/compare/v1.0.0...v1.1.0
@@ -51,6 +52,7 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 [`no-let`]: ./docs/rules/no-let.md
 [`no-loops`]: ./docs/rules/no-loops.md
 [`no-mutating-assign`]: ./docs/rules/no-mutating-assign.md
+[`no-mutating-methods`]: ./docs/rules/no-mutating-methods.md
 [`no-mutation`]: ./docs/rules/no-mutation.md
 [`no-nil`]: ./docs/rules/no-nil.md
 [`no-proxy`]: ./docs/rules/no-proxy.md
