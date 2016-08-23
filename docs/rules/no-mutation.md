@@ -48,6 +48,10 @@ exports = {};
 exports.foo = {};
 module.exports = {};
 module.exports.foo = {};
+
+function foo(a) {
+  this.a = a || {};
+}
 ```
 
 ### Pass
@@ -73,4 +77,9 @@ function Component(props) {
 Component.propTypes = {
   // ...
 };
+
+/* eslint fp/no-mutation: ["error", {"allowThis": true}] */
+function foo(a) {
+  this.a = a || {};
+}
 ```
