@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 This change log adheres to standards from [Keep a CHANGELOG](http://keepachangelog.com).
 
+## [Unreleased]
+### Added
+- Added [`no-arguments`] rule
+
 ## [2.0.0] - 2016-08-24
 ### Removed
 - **Breaking**: Removed support for Node < v4
@@ -47,6 +51,7 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 [1.2.0]: https://github.com/jfmengels/eslint-plugin-fp/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/jfmengels/eslint-plugin-fp/compare/v1.0.0...v1.1.0
 
+[`no-arguments`]: ./docs/rules/no-arguments.md
 [`no-class`]: ./docs/rules/no-class.md
 [`no-delete`]: ./docs/rules/no-delete.md
 [`no-events`]: ./docs/rules/no-events.md

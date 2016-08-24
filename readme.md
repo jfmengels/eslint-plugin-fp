@@ -25,6 +25,7 @@ Configure it in `package.json`.
       "fp"
     ],
     "rules": {
+      "fp/no-arguments": "error",
       "fp/no-class": "error",
       "fp/no-delete": "error",
       "fp/no-events": "error",
@@ -50,6 +51,7 @@ Configure it in `package.json`.
 ## Rules
 
 <!-- RULES:START -->
+- [no-arguments](docs/rules/no-arguments.md) - Forbid the use of `arguments`.
 - [no-class](docs/rules/no-class.md) - Forbid the use of `class`.
 - [no-delete](docs/rules/no-delete.md) - Forbid the use of `delete`.
 - [no-events](docs/rules/no-events.md) - Forbid the use of the `events` module.
