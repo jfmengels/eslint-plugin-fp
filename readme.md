@@ -64,6 +64,7 @@ Configure it in `package.json`.
 - [no-this](docs/rules/no-this.md) - Forbid the use of `this`.
 - [no-throw](docs/rules/no-throw.md) - Forbid the use of `throw`.
 - [no-unused-expression](docs/rules/no-unused-expression.md) - Enforce that an expression gets used.
+
 <!-- RULES:END -->
 
 ## Recommended configuration

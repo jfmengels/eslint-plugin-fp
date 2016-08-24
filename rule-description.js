@@ -25,7 +25,7 @@ const exampleConfiguration = {
 };
 
 module.exports = {
-  RULES: `\n${createIndex.createRulesDescription(settings, rules)}\n`,
+  RULES: `\n${createIndex.createRulesDescription(settings, rules)}\n\n`,
   // eslint-disable-next-line prefer-template
   EXAMPLE_CONFIGURATION: '\n```json\n' + JSON.stringify(exampleConfiguration, null, 2) + '\n```\n'
 };
