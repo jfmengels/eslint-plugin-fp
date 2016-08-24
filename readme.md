@@ -37,6 +37,7 @@ Configure it in `package.json`.
       "fp/no-mutation": "error",
       "fp/no-nil": "error",
       "fp/no-proxy": "error",
+      "fp/no-rest-parameters": "error",
       "fp/no-this": "error",
       "fp/no-throw": "error",
       "fp/no-unused-expression": "error",
@@ -63,6 +64,7 @@ Configure it in `package.json`.
 - [no-mutation](docs/rules/no-mutation.md) - Forbid the use of mutating operators.
 - [no-nil](docs/rules/no-nil.md) - Forbid the use of `null` and `undefined`.
 - [no-proxy](docs/rules/no-proxy.md) - Forbid the use of `Proxy`.
+- [no-rest-parameters](docs/rules/no-rest-parameters.md) - Forbid the use of rest parameters.
 - [no-this](docs/rules/no-this.md) - Forbid the use of `this`.
 - [no-throw](docs/rules/no-throw.md) - Forbid the use of `throw`.
 - [no-unused-expression](docs/rules/no-unused-expression.md) - Enforce that an expression gets used.

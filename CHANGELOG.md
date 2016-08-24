@@ -6,6 +6,7 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 ## [Unreleased]
 ### Added
 - Added [`no-arguments`] rule
+- Added [`no-rest-parameters`] rule
 
 ## [2.0.0] - 2016-08-24
 ### Removed
@@ -63,6 +64,7 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 [`no-mutation`]: ./docs/rules/no-mutation.md
 [`no-nil`]: ./docs/rules/no-nil.md
 [`no-proxy`]: ./docs/rules/no-proxy.md
+[`no-rest-parameters`]: ./docs/rules/no-rest-parameters.md
 [`no-this`]: ./docs/rules/no-this.md
 [`no-throw`]: ./docs/rules/no-throw.md
 [`no-unused-expression`]: ./docs/rules/no-unused-expression.md
