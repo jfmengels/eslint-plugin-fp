@@ -46,7 +46,7 @@ probableArray.concat(otherArray);
 
 Object.keys(object);
 
-/* eslint fp/no-mutating-methods: ["error", {"allowedObjects": ["_"]] */
+/* eslint fp/no-mutating-methods: ["error", {"allowedObjects": ["_"]}] */
 var _ = require('lodash/fp');
 _.sort(a);
 ```
