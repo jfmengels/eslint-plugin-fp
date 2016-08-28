@@ -5,16 +5,22 @@ When doing functional programming, you want to avoid having stateful objects and
 ### Fail
 
 ```js
-let a = 1;
-let b = 2,
-    c = 3;
-let d;
+const object = {
+  numbers: [1, 2, 3],
+  sum: function() {
+    return this.numbers.reduce((a, b) => a + b, 0);
+  }
+}
+
+object.sum();
 ```
 
 ### Pass
 
 ```js
-const a = 1;
-const b = 2,
-      c = 3;
+function sum(numbers) {
+  return numbers.reduce((a, b) => a + b);
+}
+
+sum([1, 2, 3]);
 ```
