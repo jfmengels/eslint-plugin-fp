@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This change log adheres to standards from [Keep a CHANGELOG](http://keepachangelog.com).
 
 ## [Unreleased]
+- (none)
+
+## [2.2.0] - 2016-08-31
 - Added [`no-valueof-field`] rule
 
 ## [2.1.0] - 2016-08-26
@@ -49,7 +52,8 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 - Added [`no-this`] rule
 - Added [`no-throw`] rule
 
-[Unreleased]: https://github.com/jfmengels/eslint-plugin-fp/compare/v2.1.0...master
+[Unreleased]: https://github.com/jfmengels/eslint-plugin-fp/compare/v2.2.0...master
+[2.2.0]: https://github.com/jfmengels/eslint-plugin-fp/compare/v2.1.0...v2.2.0
 [2.1.0]: https://github.com/jfmengels/eslint-plugin-fp/compare/v2.0.0...v2.1.0
 [2.0.0]: https://github.com/jfmengels/eslint-plugin-fp/compare/v1.3.0...v2.0.0
 [1.3.0]: https://github.com/jfmengels/eslint-plugin-fp/compare/v1.2.0...v1.3.0
