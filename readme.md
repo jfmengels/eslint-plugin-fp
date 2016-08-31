@@ -41,6 +41,7 @@ Configure it in `package.json`.
       "fp/no-this": "error",
       "fp/no-throw": "error",
       "fp/no-unused-expression": "error",
+      "fp/no-valueof-field": "error",
       "no-var": "error"
     }
   }
@@ -68,6 +69,7 @@ Configure it in `package.json`.
 - [no-this](docs/rules/no-this.md) - Forbid the use of `this`.
 - [no-throw](docs/rules/no-throw.md) - Forbid the use of `throw`.
 - [no-unused-expression](docs/rules/no-unused-expression.md) - Enforce that an expression gets used.
+- [no-valueof-field](docs/rules/no-valueof-field.md) - Forbid the creation of `valueOf` fields.
 
 <!-- RULES:END -->
 

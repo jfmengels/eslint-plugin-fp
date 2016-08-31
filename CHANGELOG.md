@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This change log adheres to standards from [Keep a CHANGELOG](http://keepachangelog.com).
 
 ## [Unreleased]
-- (none)
+- Added [`no-valueof-field`] rule
 
 ## [2.1.0] - 2016-08-26
 ### Added
@@ -72,3 +72,4 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 [`no-this`]: ./docs/rules/no-this.md
 [`no-throw`]: ./docs/rules/no-throw.md
 [`no-unused-expression`]: ./docs/rules/no-unused-expression.md
+[`no-valueof-field`]: ./docs/rules/no-valueof-field.md
