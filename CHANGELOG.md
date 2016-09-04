@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This change log adheres to standards from [Keep a CHANGELOG](http://keepachangelog.com).
 
 ## [Unreleased]
-- (none)
+### Added
+- Added `allowUseStrict` option to [`no-unused-expression`] to allow `'use strict';` statements.
 
 ## [2.2.0] - 2016-08-31
 - Added [`no-valueof-field`] rule

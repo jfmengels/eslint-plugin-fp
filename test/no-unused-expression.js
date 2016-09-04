@@ -33,7 +33,15 @@ ruleTester.run('no-unused-expression', rule, {
     '--foo',
     '++foo',
     'foo--',
-    'foo++'
+    'foo++',
+    {
+      code: '"use strict";',
+      options: [{allowUseStrict: true}]
+    },
+    {
+      code: 'function foo() { "use strict"; return 2; }',
+      options: [{allowUseStrict: true}]
+    }
   ],
   invalid: [
     {
@@ -78,6 +86,14 @@ ruleTester.run('no-unused-expression', rule, {
     },
     {
       code: 'function foo(a, b) { a + b; }',
+      errors: [error]
+    },
+    {
+      code: '"use strict";',
+      errors: [error]
+    },
+    {
+      code: 'function foo() { "use strict"; return 2; }',
       errors: [error]
     }
   ]
