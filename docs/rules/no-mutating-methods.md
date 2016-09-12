@@ -8,7 +8,7 @@ It will also report the use of `Object.defineProperties`, `Object.defineProperty
 
 This rule supports the following options:
 
-`allowedObjects`: Array of names of objects whose methods can be used with no restrictions. This can be useful when using libraries like [`lodash/fp`](https://github.com/lodash/lodash/wiki/FP-Guide) or [`Ramda`](ramdajs.com), whose methods will not mutate the arguments. Defaults to an empty array.
+`allowedObjects`: Array of names of objects whose methods can be used with no restrictions. This can be useful when using libraries like [`lodash/fp`](https://github.com/lodash/lodash/wiki/FP-Guide) or [`Ramda`](http://ramdajs.com), whose methods will not mutate the arguments. Defaults to an empty array.
 If set to `true`, then this rule will not report when assigning to or to a (sub-) property of `exports` or `module.exports`. Note that this will not report when reassigning or overwriting previous exports.
 
 You can set the options like this:
