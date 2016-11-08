@@ -1,13 +1,6 @@
 'use strict';
 
-function isStaticRequire(node) {
-  return node &&
-    node.callee &&
-    node.callee.type === 'Identifier' &&
-    node.callee.name === 'require' &&
-    node.arguments.length === 1 &&
-    node.arguments[0].type === 'Literal';
-}
+const astUtils = require('eslint-ast-utils');
 
 function report(context, node) {
   context.report({
@@ -24,7 +17,7 @@ const create = function (context) {
       }
     },
     CallExpression(node) {
-      if (isStaticRequire(node) && node.arguments[0].value === 'events') {
+      if (astUtils.isStaticRequire(node) && node.arguments[0].value === 'events') {
         report(context, node);
       }
     }

@@ -6,6 +6,7 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 ## [Unreleased]
 ### Added
 - Added `allowUseStrict` option to [`no-unused-expression`] to allow `'use strict';` statements.
+- Use [`eslint-ast-utils`] to replace some logic.
 
 ## [2.2.0] - 2016-08-31
 - Added [`no-valueof-field`] rule
@@ -60,6 +61,8 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 [1.3.0]: https://github.com/jfmengels/eslint-plugin-fp/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/jfmengels/eslint-plugin-fp/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/jfmengels/eslint-plugin-fp/compare/v1.0.0...v1.1.0
+
+[`eslint-ast-utils`]: https://github.com/jfmengels/eslint-ast-utils
 
 [`no-arguments`]: ./docs/rules/no-arguments.md
 [`no-class`]: ./docs/rules/no-class.md

@@ -41,6 +41,7 @@
   ],
   "dependencies": {
     "create-eslint-index": "^1.0.0",
+    "eslint-ast-utils": "^1.0.0",
     "lodash": "^4.13.1",
     "req-all": "^0.1.0"
   },
