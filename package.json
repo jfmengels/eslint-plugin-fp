@@ -45,7 +45,7 @@
     "req-all": "^0.1.0"
   },
   "devDependencies": {
-    "ava": "^0.15.2",
+    "ava": "^0.16.0",
     "eslint": "^3.7.1",
     "eslint-ava-rule-tester": "^0.1.1",
     "inject-in-tag": "^1.1.1",
