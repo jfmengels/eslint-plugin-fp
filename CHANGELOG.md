@@ -8,6 +8,9 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 - Added `allowUseStrict` option to [`no-unused-expression`] to allow `'use strict';` statements.
 - Use [`eslint-ast-utils`] to replace some logic.
 
+### Fixed
+- Allow properties named `arguments` in [`no-arguments`].
+
 ## [2.2.0] - 2016-08-31
 - Added [`no-valueof-field`] rule
 

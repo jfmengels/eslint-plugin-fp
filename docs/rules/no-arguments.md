@@ -23,4 +23,6 @@ function sum(numbers) {
 }
 
 sum([1, 2, 3]);
+
+var args = node.arguments;
 ```

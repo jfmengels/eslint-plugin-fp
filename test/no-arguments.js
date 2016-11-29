@@ -22,7 +22,12 @@ ruleTester.run('no-arguments', rule, {
     'function foo(a, b) {}',
     'function foo(a, b) { return a + b; }',
     'var foo = (a, b) => a + b;',
-    'function foo(...args) {}'
+    'function foo(...args) {}',
+    'function foo(...args) {}',
+    'function foo() { console.log(argument); }',
+    'function foo() { console.log(node.arguments); }',
+    'node.arguments',
+    'var obj = { arguments: [] }'
   ],
   invalid: [
     {
@@ -31,6 +36,14 @@ ruleTester.run('no-arguments', rule, {
     },
     {
       code: 'function foo() { console.log(arguments[0]); }',
+      errors: [error]
+    },
+    {
+      code: 'function foo() { console.log(arguments.node); }',
+      errors: [error]
+    },
+    {
+      code: 'function foo() { console.log({value: arguments}); }',
       errors: [error]
     },
     {
