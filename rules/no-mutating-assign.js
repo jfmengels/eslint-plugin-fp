@@ -19,10 +19,19 @@ const isObjectExpression = _.flow(
   _.includes(_, ['ObjectExpression', 'ArrayExpression'])
 );
 
+const isFunctionExpression = _.flow(
+  _.property('type'),
+  _.includes(_, ['FunctionExpression', 'ArrowFunctionExpression'])
+);
+
+function isAllowedFirstArgument(arg) {
+  return isObjectExpression(arg) || isFunctionExpression(arg);
+}
+
 const create = function (context) {
   return {
     CallExpression(node) {
-      if (isObjectAssign(node.callee) && !isObjectExpression(node.arguments[0])) {
+      if (isObjectAssign(node.callee) && !isAllowedFirstArgument(node.arguments[0])) {
         context.report({
           node,
           message: 'Unallowed use of mutating `Object.assign`'

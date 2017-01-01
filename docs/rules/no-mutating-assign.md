@@ -17,6 +17,7 @@ var a = {foo: 1, bar: 2};
 var b = {bar: 3};
 Object.assign({}, a, b);
 Object.assign({foo: 1, bar: 2}, b);
+Object.assign(function foo() {}, {propTypes: {}});
 ```
 
 [`Object.assign()`]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign

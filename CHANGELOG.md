@@ -10,6 +10,7 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 
 ### Fixed
 - Allow properties named `arguments` in [`no-arguments`].
+- Allow function expressions in [`no-mutating-assign`].
 
 ## [2.2.0] - 2016-08-31
 - Added [`no-valueof-field`] rule
