@@ -16,7 +16,8 @@ module.exports = {
   meta: {
     docs: {
       description: 'Forbid the use of `this`.',
-      recommended: 'error'
+      recommended: 'error',
+      url: 'https://github.com/jfmengels/eslint-plugin-fp/tree/master/docs/rules/no-this.md'
     }
   }
 };

@@ -46,7 +46,8 @@ module.exports = {
   meta: {
     docs: {
       description: 'Forbid the use of [`Object.assign()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) with a variable as first argument.',
-      recommended: 'error'
+      recommended: 'error',
+      url: 'https://github.com/jfmengels/eslint-plugin-fp/tree/master/docs/rules/no-mutating-assign.md'
     }
   }
 };

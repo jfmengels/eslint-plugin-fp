@@ -18,7 +18,8 @@ module.exports = {
   meta: {
     docs: {
       description: 'Forbid the use of `delete`.',
-      recommended: 'error'
+      recommended: 'error',
+      url: 'https://github.com/jfmengels/eslint-plugin-fp/tree/master/docs/rules/no-delete.md'
     }
   }
 };
