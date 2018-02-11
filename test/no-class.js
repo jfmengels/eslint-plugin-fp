@@ -29,6 +29,18 @@ ruleTester.run('no-class', rule, {
         }
       }`,
       errors: [error]
+    },
+    {
+      code: 'export default class MyComponent extends React.Component {}',
+      errors: [error]
+    },
+    {
+      code: 'module.exports = class MyClass {}',
+      errors: [error]
+    },
+    {
+      code: 'const MyClass = class {}',
+      errors: [error]
     }
   ]
 });
