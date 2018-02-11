@@ -13,6 +13,13 @@ const isUseStrictStatement = _.matches(
   {type: 'Literal', value: 'use strict'}
 );
 
+const isSuperCall = _.matches({
+  type: 'CallExpression',
+  callee: {
+    type: 'Super'
+  }
+});
+
 const report = (context, node) => {
   context.report({
     node,
@@ -28,6 +35,9 @@ const create = function (context) {
       if (hasSideEffect(node.expression) ||
         (isUseStrictStatement(node.expression) && allowUseStrict)
       ) {
+        return;
+      }
+      if (isSuperCall(node.expression)) {
         return;
       }
       report(context, node);
