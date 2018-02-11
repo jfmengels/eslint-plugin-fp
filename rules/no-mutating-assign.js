@@ -19,13 +19,32 @@ const isObjectExpression = _.flow(
   _.includes(_, ['ObjectExpression', 'ArrayExpression'])
 );
 
+const isObjectCreateNull = _.matches({
+  type: 'CallExpression',
+  callee: {
+    type: 'MemberExpression',
+    object: {
+      type: 'Identifier',
+      name: 'Object'
+    },
+    property: {
+      type: 'Identifier',
+      name: 'create'
+    }
+  },
+  arguments: [{
+    type: 'Literal',
+    value: null
+  }]
+});
+
 const isFunctionExpression = _.flow(
   _.property('type'),
   _.includes(_, ['FunctionExpression', 'ArrowFunctionExpression'])
 );
 
 function isAllowedFirstArgument(arg) {
-  return isObjectExpression(arg) || isFunctionExpression(arg);
+  return isObjectExpression(arg) || isObjectCreateNull(arg) || isFunctionExpression(arg);
 }
 
 const create = function (context) {
