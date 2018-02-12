@@ -85,7 +85,8 @@ module.exports = {
   meta: {
     docs: {
       description: 'Forbid the use of mutating methods.',
-      recommended: 'error'
+      recommended: 'error',
+      url: 'https://github.com/jfmengels/eslint-plugin-fp/tree/master/docs/rules/no-mutating-methods.md'
     }
   }
 };

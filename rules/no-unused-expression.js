@@ -55,7 +55,8 @@ module.exports = {
   meta: {
     docs: {
       description: 'Enforce that an expression gets used.',
-      recommended: 'error'
+      recommended: 'error',
+      url: 'https://github.com/jfmengels/eslint-plugin-fp/tree/master/docs/rules/no-unused-expression.md'
     }
   }
 };
