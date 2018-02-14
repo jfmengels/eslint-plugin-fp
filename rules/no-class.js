@@ -1,13 +1,16 @@
 'use strict';
 
 const create = function (context) {
+  function report(node) {
+    context.report({
+      node,
+      message: 'Unallowed use of `class`. Use functions instead'
+    });
+  }
+
   return {
-    ClassDeclaration(node) {
-      context.report({
-        node,
-        message: 'Unallowed use of `class`. Use functions instead'
-      });
-    }
+    ClassDeclaration: report,
+    ClassExpression: report
   };
 };
 
