@@ -34,6 +34,7 @@ ruleTester.run('no-unused-expression', rule, {
     '++foo',
     'foo--',
     'foo++',
+    'class MyClass extends SuperClass { constructor(arg) { super(arg) } }',
     {
       code: '"use strict";',
       options: [{allowUseStrict: true}]
@@ -94,6 +95,17 @@ ruleTester.run('no-unused-expression', rule, {
     },
     {
       code: 'function foo() { "use strict"; return 2; }',
+      errors: [error]
+    },
+    {
+      code: [
+        'class MyClass extends SuperClass {',
+        '  constructor(arg) {',
+        '    super(arg);',
+        '    super.method();',
+        '  }',
+        '}'
+      ].join('\n'),
       errors: [error]
     }
   ]
