@@ -23,6 +23,8 @@ ruleTester.run('no-mutating-assign', rule, {
     'Object.foo(a, b);',
     'Object.assign({});',
     'Object.assign({}, b);',
+    'Object.assign(Object.create(null));',
+    'Object.assign(Object.create(null), b);',
     'Object.assign({}, b, c, d, e);',
     'Object.assign({foo: 1, bar: 2}, b);',
     'Object.assign([1, 2], b);',
@@ -57,6 +59,10 @@ ruleTester.run('no-mutating-assign', rule, {
     },
     {
       code: 'function fn() {}; Object.assign(fn, b);',
+      errors: [error]
+    },
+    {
+      code: 'Object.assign(Object.create)',
       errors: [error]
     }
   ]
